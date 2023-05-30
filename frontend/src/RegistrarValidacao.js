@@ -1,9 +1,14 @@
-function Validacao(values){
 
+function Validacao(values) {
     let error = {}
     const email_pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    /*const password_pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{8,}$ /*/
-
+    /*const password_pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{8,}$/*/
+    
+    if (values.name === ""){
+        error.name = "Preencha esse campo"
+    }else{
+        error.name = ""
+    }
 
     if (values.email === ""){
         error.email = "Preencha esse campo"
